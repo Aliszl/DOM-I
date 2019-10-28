@@ -56,16 +56,16 @@ for(i=0; i<links.length; i++){
   links[i].textContent = siteContent.nav [`nav-item-${i+1}`];
   links[i].style.color = "green";
 }
+console.log(links[1].previousElementSibling);
 const newNav1 = document.createElement('a');
 console.log(newNav1);
 newNav1.textContent = 'Nav-item-7';
 const newNav2 = document.createElement('a');
 newNav2.textContent = 'Nav-item-8';
 console.log(newNav2);
-// const secondaryContent = document.querySelectorAll('a');
-// console.log(secondaryContent);
-// secondaryContent.append(newNav);
-// links.append(newNav);
+
+links[1].previousElementSibling.prepend(newNav1);
+links[5].previousElementSibling.append(newNav2);
 //====== Creating New HTML Elements ======//
 // 1- Create Element
 // const newParagraph = document.createElement('p');
