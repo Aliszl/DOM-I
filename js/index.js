@@ -37,37 +37,6 @@ const siteContent = {
   },
 };
 
-const topContentH4 = document.querySelectorAll('.top-content .text-content h4');
-const topContentP = document.querySelectorAll('.top-content .text-content p');
-topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
-topContentP[0].textContent = siteContent["main-content"]["features-content"];
-topContentH4[1].textContent = siteContent["main-content"]["features-h4"];
-topContentP[1].textContent = siteContent["main-content"]["features-content"];
-
-const bottomContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
-const bottomContentP = document.querySelectorAll('.bottom-content .text-content p');
-bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
-bottomContentP[0].textContent = siteContent["main-content"]["services-content"];
-bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
-bottomContentP[1].textContent = siteContent["main-content"]["product-content"];
-bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
-bottomContentP[2].textContent = siteContent["main-content"]["vision-content"];
-
-
-const contactH4 = document.querySelector('.contact h4');
-const contactP = document.querySelectorAll('.contact p');
-console.log(contactH4);
-contactH4.textContent = siteContent["contact"]["contact-h4"];
-contactP[0].textContent = siteContent["contact"]["address"];
-contactP[1].textContent = siteContent["contact"]["phone"];
-contactP[2].textContent = siteContent["contact"]["email"];
-// // bottomContentP[3].textContent = siteContent["contact"]["address"];
-
-// Footer
-
-const footerP = document.querySelector('footer p');
-console.log(footerP);
-footerP.textContent = siteContent["footer"]["copyright"];
 
 
 // This works for features
@@ -104,10 +73,17 @@ console.log(logo);
 
 // Nav Bar
 
+// items[1].style.fontWeight = 'bold';
+// items[1].style.backgroundColor = 'yellow';
+
 let links = document.querySelectorAll('a');
 for(i=0; i<links.length; i++){
   links[i].textContent = siteContent.nav [`nav-item-${i+1}`];
+  links[i].style.color = "green";
 }
+
+
+// alternate way
 // let navLink1 = document.querySelector("a");
 // navLink1.innerText = siteContent.nav["nav-item-1"];
 // console.log(navLink1);
@@ -147,6 +123,22 @@ let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
 console.log(codeSnippet);
 
+
+
+// main Title - Dom Is Awesome
+let domIsAwesomeTitle = document.querySelector(".cta .cta-text h1");
+
+domIsAwesomeTitle.textContent = siteContent["cta"]["h1"];
+console.log(domIsAwesomeTitle);
+
+// Main content - top
+const topContentH4 = document.querySelectorAll('.top-content .text-content h4');
+const topContentP = document.querySelectorAll('.top-content .text-content p');
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+topContentH4[1].textContent = siteContent["main-content"]["features-h4"];
+topContentP[1].textContent = siteContent["main-content"]["features-content"];
+
 // Full width Image
 
 let fullWidthCodePic = document.getElementById("middle-img");
@@ -154,11 +146,31 @@ let fullWidthCodePic = document.getElementById("middle-img");
 fullWidthCodePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 console.log(fullWidthCodePic);
 
-// main Title - Dom Is Awesome
-let domIsAwesomeTitle = document.querySelector(".cta .cta-text h1");
+// Main content - bottom
+const bottomContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
+const bottomContentP = document.querySelectorAll('.bottom-content .text-content p');
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentP[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentP[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentP[2].textContent = siteContent["main-content"]["vision-content"];
 
-domIsAwesomeTitle.textContent = siteContent["cta"]["h1"];
-console.log(domIsAwesomeTitle);
+// Contact section
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+console.log(contactH4);
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+// // bottomContentP[3].textContent = siteContent["contact"]["address"];
+
+// Footer
+
+const footerP = document.querySelector('footer p');
+console.log(footerP);
+footerP.textContent = siteContent["footer"]["copyright"];
 
 // This Works too
 
