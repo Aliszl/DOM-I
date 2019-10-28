@@ -37,11 +37,63 @@ const siteContent = {
   },
 };
 
-let firstHeader = document.querySelector("h4:nth-child(1)");
-// firstHeader.innerText = siteContent.main-content.top-content h4["features-h4"];
+const topContentH4 = document.querySelectorAll('.top-content .text-content h4');
+const topContentP = document.querySelectorAll('.top-content .text-content p');
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+topContentH4[1].textContent = siteContent["main-content"]["features-h4"];
+topContentP[1].textContent = siteContent["main-content"]["features-content"];
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
+const bottomContentP = document.querySelectorAll('.bottom-content .text-content p');
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentP[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentP[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentP[2].textContent = siteContent["main-content"]["vision-content"];
 
 
-console.log(firstHeader);
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+console.log(contactH4);
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+// // bottomContentP[3].textContent = siteContent["contact"]["address"];
+
+// Footer
+
+const footerP = document.querySelector('footer p');
+console.log(footerP);
+footerP.textContent = siteContent["footer"]["copyright"];
+
+
+// This works for features
+// let featuresHeader = document.querySelector(".text-content h4:nth-child(1)");
+// console.log(featuresHeader);
+
+
+// but this doesnt work for about
+// let aboutHeader = document.querySelector("h4:nth-child(1)");
+// let features = document.querySelector("p:nth-child(1)");
+// console.log(features);
+
+// This doesnt work as cant use the string litteral at the end like with Nav
+// let headers = document.querySelectorAll('h4');
+// for(i=0; i<headers.length; i++){
+//   headers[i].textContent = siteContent.main-content [i];
+// }
+
+// let featuresHeader = document.querySelectorAll("h4:nth-child(0)");
+// // h4:nth-child(1)
+// console.log(featuresHeader);
+// featuresHeader.innerText = siteContent["main-content"]["features-h4"];
+
+// let aboutHeader = document.querySelectorAll("h4:nth-child(2)");
+// console.log(aboutHeader);
+// aboutHeader.innerText = siteContent["main-content"]["about-h4"];
 
 
 
@@ -51,29 +103,34 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 console.log(logo);
 
 // Nav Bar
-let navLink1 = document.querySelector("a");
-navLink1.innerText = siteContent.nav["nav-item-1"];
-console.log(navLink1);
 
-let navLink2 = document.querySelector("a:nth-child(2)");
-navLink2.innerText = siteContent.nav["nav-item-2"];
-console.log(navLink2);
+let links = document.querySelectorAll('a');
+for(i=0; i<links.length; i++){
+  links[i].textContent = siteContent.nav [`nav-item-${i+1}`];
+}
+// let navLink1 = document.querySelector("a");
+// navLink1.innerText = siteContent.nav["nav-item-1"];
+// console.log(navLink1);
 
-let navLink3 = document.querySelector("a:nth-child(3)");
-navLink3.innerText = siteContent.nav["nav-item-3"];
-console.log(navLink3);
+// let navLink2 = document.querySelector("a:nth-child(2)");
+// navLink2.innerText = siteContent.nav["nav-item-2"];
+// console.log(navLink2);
 
-let navLink4 = document.querySelector("a:nth-child(4)");
-navLink4.innerText = siteContent.nav["nav-item-4"];
-console.log(navLink4);
+// let navLink3 = document.querySelector("a:nth-child(3)");
+// navLink3.innerText = siteContent.nav["nav-item-3"];
+// console.log(navLink3);
 
-let navLink5 = document.querySelector("a:nth-child(5)");
-navLink5.innerText = siteContent.nav["nav-item-5"];
-console.log(navLink5);
+// let navLink4 = document.querySelector("a:nth-child(4)");
+// navLink4.innerText = siteContent.nav["nav-item-4"];
+// console.log(navLink4);
 
-let navLink6 = document.querySelector("a:nth-child(6)");
-navLink6.innerText = siteContent.nav["nav-item-6"];
-console.log(navLink6);
+// let navLink5 = document.querySelector("a:nth-child(5)");
+// navLink5.innerText = siteContent.nav["nav-item-5"];
+// console.log(navLink5);
+
+// let navLink6 = document.querySelector("a:nth-child(6)");
+// navLink6.innerText = siteContent.nav["nav-item-6"];
+// console.log(navLink6);
 
 // Get started Button
 let getStartedButton = document.querySelector("button");
