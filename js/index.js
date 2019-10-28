@@ -37,6 +37,86 @@ const siteContent = {
   },
 };
 
+let firstHeader = document.querySelector("h4:nth-child(1)");
+// firstHeader.innerText = siteContent.main-content.top-content h4["features-h4"];
+
+
+console.log(firstHeader);
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+console.log(logo);
+
+// Nav Bar
+let navLink1 = document.querySelector("a");
+navLink1.innerText = siteContent.nav["nav-item-1"];
+console.log(navLink1);
+
+let navLink2 = document.querySelector("a:nth-child(2)");
+navLink2.innerText = siteContent.nav["nav-item-2"];
+console.log(navLink2);
+
+let navLink3 = document.querySelector("a:nth-child(3)");
+navLink3.innerText = siteContent.nav["nav-item-3"];
+console.log(navLink3);
+
+let navLink4 = document.querySelector("a:nth-child(4)");
+navLink4.innerText = siteContent.nav["nav-item-4"];
+console.log(navLink4);
+
+let navLink5 = document.querySelector("a:nth-child(5)");
+navLink5.innerText = siteContent.nav["nav-item-5"];
+console.log(navLink5);
+
+let navLink6 = document.querySelector("a:nth-child(6)");
+navLink6.innerText = siteContent.nav["nav-item-6"];
+console.log(navLink6);
+
+// Get started Button
+let getStartedButton = document.querySelector("button");
+// domIsAwesomeTitle.textContent('src', siteContent["cta"]["h1"])
+console.log(getStartedButton);
+getStartedButton.textContent = siteContent["cta"]["button"];
+
+
+
+// Circular Image
+
+let codeSnippet = document.getElementById("cta-img");
+
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(codeSnippet);
+
+// Full width Image
+
+let fullWidthCodePic = document.getElementById("middle-img");
+
+fullWidthCodePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+console.log(fullWidthCodePic);
+
+// main Title - Dom Is Awesome
+let domIsAwesomeTitle = document.querySelector(".cta .cta-text h1");
+
+domIsAwesomeTitle.textContent = siteContent["cta"]["h1"];
+console.log(domIsAwesomeTitle);
+
+// This Works too
+
+// let domIsAwesomeTitle = document.querySelector(".cta .cta-text h1");
+// console.log(domIsAwesomeTitle);
+// domIsAwesomeTitle.textContent = "DOM Is Awesome";
+
+// This doesnt work:
+// let domIsAwesomeTitle = document.querySelector(".cta .cta-text h1");
+// domIsAwesomeTitle.setAttribute('src', siteContent["cta"]["h1"])
+// console.log(domIsAwesomeTitle);
+
+
+
+
+
+
+
