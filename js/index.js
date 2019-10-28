@@ -39,31 +39,6 @@ const siteContent = {
 
 
 
-// This works for features
-// let featuresHeader = document.querySelector(".text-content h4:nth-child(1)");
-// console.log(featuresHeader);
-
-
-// but this doesnt work for about
-// let aboutHeader = document.querySelector("h4:nth-child(1)");
-// let features = document.querySelector("p:nth-child(1)");
-// console.log(features);
-
-// This doesnt work as cant use the string litteral at the end like with Nav
-// let headers = document.querySelectorAll('h4');
-// for(i=0; i<headers.length; i++){
-//   headers[i].textContent = siteContent.main-content [i];
-// }
-
-// let featuresHeader = document.querySelectorAll("h4:nth-child(0)");
-// // h4:nth-child(1)
-// console.log(featuresHeader);
-// featuresHeader.innerText = siteContent["main-content"]["features-h4"];
-
-// let aboutHeader = document.querySelectorAll("h4:nth-child(2)");
-// console.log(aboutHeader);
-// aboutHeader.innerText = siteContent["main-content"]["about-h4"];
-
 
 
 // Example: Update the img src for the logo
@@ -81,7 +56,36 @@ for(i=0; i<links.length; i++){
   links[i].textContent = siteContent.nav [`nav-item-${i+1}`];
   links[i].style.color = "green";
 }
+const newNav1 = document.createElement('a');
+console.log(newNav1);
+newNav1.textContent = 'Nav-item-7';
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'Nav-item-8';
+console.log(newNav2);
+// const secondaryContent = document.querySelectorAll('a');
+// console.log(secondaryContent);
+// secondaryContent.append(newNav);
+// links.append(newNav);
+//====== Creating New HTML Elements ======//
+// 1- Create Element
+// const newParagraph = document.createElement('p');
+// // 2- Add Content
+// newParagraph.textContent = 'Hello! What is your name?';
+// // 3- Select Target Parent Element
+// const secondaryContent = document.querySelector('.secondary-content');
+// // 4- Add Element To Parent
+// secondaryContent.append(newParagraph);
 
+// // Adding as first child
+// // secondaryContent.prepend(newParagraph);
+
+// const newHeading = document.createElement('h1');
+
+// newHeading.textContent = 'Cash rules everything around me!';
+
+// const mainContent = document.querySelector('.main-content');
+
+// mainContent.prepend(newHeading);
 
 // alternate way
 // let navLink1 = document.querySelector("a");
@@ -183,6 +187,31 @@ footerP.textContent = siteContent["footer"]["copyright"];
 // domIsAwesomeTitle.setAttribute('src', siteContent["cta"]["h1"])
 // console.log(domIsAwesomeTitle);
 
+// Old attempts
+// This works for features
+// let featuresHeader = document.querySelector(".text-content h4:nth-child(1)");
+// console.log(featuresHeader);
+
+
+// but this doesnt work for about
+// let aboutHeader = document.querySelector("h4:nth-child(1)");
+// let features = document.querySelector("p:nth-child(1)");
+// console.log(features);
+
+// This doesnt work as cant use the string litteral at the end like with Nav
+// let headers = document.querySelectorAll('h4');
+// for(i=0; i<headers.length; i++){
+//   headers[i].textContent = siteContent.main-content [i];
+// }
+
+// let featuresHeader = document.querySelectorAll("h4:nth-child(0)");
+// // h4:nth-child(1)
+// console.log(featuresHeader);
+// featuresHeader.innerText = siteContent["main-content"]["features-h4"];
+
+// let aboutHeader = document.querySelectorAll("h4:nth-child(2)");
+// console.log(aboutHeader);
+// aboutHeader.innerText = siteContent["main-content"]["about-h4"];
 
 
 
